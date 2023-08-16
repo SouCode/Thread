@@ -15,8 +15,24 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
-    </html>
+    <ClerkProvider>
+      <html lang="en">
+        <body className={inter.className}>
+          <Topbar />
+
+          <main>
+            <LeftSidebar />
+            <section className="main-container">
+              <div className="w-full max-w-4x1">
+                {children}
+              </div>
+            </section>
+            <RightSidebar />
+          </main>
+
+          <Bottombar />
+        </body>
+      </html>
+    </ClerkProvider>
   )
 }
