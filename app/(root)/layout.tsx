@@ -22,7 +22,7 @@ export default function RootLayout({
 
           <main>
             <LeftSidebar />
-            <section className="main-container">
+            <section className="main-container">Test
               <div className="w-full max-w-4x1">
                 {children}
               </div>
